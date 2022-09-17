@@ -1,0 +1,204 @@
+/* Inicio Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Fim Reset */
+
+/* ######################################### */
+
+
+:root {
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-cyan-alpha: hsla(179, 61%, 44%, 1);
+    --primary-yellow: hsl(71, 73%, 54%);
+    --neutral-gray: hsl(204, 43%, 93%);
+    --neutral-blue: hsl(218, 22%, 67%);
+
+    
+    --primary-font: 'Karla', sans-serif;
+    --title-size: 24px;
+    --sub-title-size: 18px;
+    --text-size: 16px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--neutral-gray);
+}
+
+.container {
+    width: 635px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.community {
+    width: 100%;
+    background-color: white;
+    padding: 40px;
+}
+.community .community__container .title {
+    font-family: var(--primary-font);
+    font-size: var(--title-size);
+    font-weight: 700;
+    color: var(--primary-cyan);
+    padding-bottom: 15px;
+}
+.community .community__container .sub-title {
+    font-family: var(--primary-font);
+    font-size: var(--sub-title-size);
+    font-weight: 700;
+    color: var(--primary-yellow);
+    padding-bottom: 15px;
+}
+.community .community__container .text {
+    font-family: var(--primary-font);
+    font-size: var(--text-size);
+    font-weight: 400;
+    line-height: 24px;
+}
+/* Fim Community */
+
+/* ######################################### */
+
+
+.subscribe {
+    background-color: var(--primary-cyan);
+    padding: 40px;
+    display: flex;
+    align-self: stretch;
+    flex-grow: 1;
+    border-bottom-left-radius: 5px;
+}
+.subscribe .subscribe__container .title {
+    font-family: var(--primary-font);
+    font-size: var(--title-size);
+    font-weight: 700;
+    color: white;
+    padding-bottom: 15px;
+}
+.subscribe .subscribe__container .text {
+    font-family: var(--primary-font);
+    font-size: var(--text-size);
+    font-weight: 400;
+    color: white;
+    padding-bottom: 15px;
+}
+.subscribe .subscribe__container .text .price {
+    font-family: var(--primary-font);
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+.subscribe .subscribe__container .btn {
+    font-family: var(--primary-font);
+    font-size: var(--text-size);
+    font-weight: 700;
+    color: white;
+    background-color: var(--primary-yellow);
+    border: none;
+    border-radius: 5px;
+    width: 237px;
+    margin-top: 25px;
+    padding: 15px 40px;
+}
+.subscribe .subscribe__container .btn:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+/* Fim Subscribe */
+
+/* ######################################### */
+
+.why {
+    background-color: var(--primary-cyan-alpha);
+    padding: 40px;
+    display: flex;
+    align-self: stretch;
+    flex-grow: 1;
+    border-bottom-right-radius: 5px;
+}
+.why .why__container .title {
+    font-family: var(--primary-font);
+    font-size: var(--title-size);
+    font-weight: 700;
+    color: white;
+    padding-bottom: 15px;
+}
+.why .why__container .text {
+    font-family: var(--primary-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    line-height: 20px;
+}
+
+/* Fim Why */
+
+/* ######################################### */
+
+@media (max-width: 609px) {
+    .container {
+        width: 375px;
+    }
+    .subscribe {
+        border-bottom-left-radius: 0px;
+    }
+    .why {
+        border-bottom-left-radius: 5px;
+    }
+}
+
+@media (max-width: 375px) {
+    .community,
+    .subscribe,
+    .why {
+        padding: 24px;
+    }
+}
